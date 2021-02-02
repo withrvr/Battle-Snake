@@ -64,6 +64,7 @@ class Battlesnake(object):
         head_x = data["you"]["head"]["x"]
         head_y = data["you"]["head"]["y"]
 
+
         
         # checking the corner of the board
 
@@ -78,6 +79,9 @@ class Battlesnake(object):
             move = 'left'
         # top-left corner
         elif head_x == 0 and head_y == self.board_width:
+            move = 'down'
+        # if hitted to left side
+        elif head_x == 0:
             move = 'down'
 
 
